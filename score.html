@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ランダムポイント</title>
+    <link rel="stylesheet" href="dice.css">
+<script>
+    function Saikoro() {
+        let saikoro = 10+Math.floor( Math.random() *10 ) +1;
+        //document.getElementById("kekka").innerHTML = saikoro;
+       if(saikoro===20){
+         document.getElementById("kekka").innerHTML ="5pt";
+       }else if(saikoro>=17){
+        document.getElementById("kekka").innerHTML = "3pt";
+       }else if(saikoro>=14){
+        document.getElementById("kekka").innerHTML = "2pt";
+       }else{
+        document.getElementById("kekka").innerHTML = "1pt";
+       }
+        document.getElementById("sainome").src= saikoro + ".png";
+}
+</script>
+</head>
+<body>
+    <p><img id="sainome" src="11.png" width="100" height="100"></p>
+    <p class="virtualinput"><button onclick="Saikoro();">上昇値を算出する</button></p>
+    <p id="kekka"></p>
+</body>
+</html>

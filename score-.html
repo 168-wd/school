@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ランダムマイナスポイント</title>
+    <link rel="stylesheet" href="dice.css">
+<script>
+    function Saikoro() {
+        let saikoro = Math.floor( Math.random() *4 ) +1;
+        //document.getElementById("kekka").innerHTML = saikoro;
+       if(saikoro===1){
+         document.getElementById("kekka").innerHTML ="-2pt";
+       }else{
+        document.getElementById("kekka").innerHTML = "-1pt";
+       }
+        document.getElementById("sainome").src= saikoro + ".png";
+}
+</script>
+</head>
+<body>
+    <p><img id="sainome" src="11.png" width="100" height="100"></p>
+    <p class="virtualinput"><button onclick="Saikoro();">減少値を算出する</button></p>
+    <p id="kekka"></p>
+</body>
+</html>
